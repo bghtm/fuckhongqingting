@@ -23,6 +23,18 @@
 - 【【校园跑软件分析】p3 python上传跑步成绩】 https://www.bilibili.com/video/BV1sHnJzaEGE/
 - 【【校园跑软件分析】p2查询跑步成绩 抓包与发包】 https://www.bilibili.com/video/BV1NEnbzxE43/
 - 【某校园跑软件从虚拟定位到解密数据包到python上传数据【p1虚拟定位】】 https://www.bilibili.com/video/BV1rAntz2ES1/
+（以上视频全被下架了）
+
+### m站视频
+- 【某校园跑软件从虚拟定位到解密数据包到python上传数据【p1虚拟定位】 - 喵御宅】
+https://mfuns.net/mv52228
+- 【p2查询跑步成绩抓包与发包 - 喵御宅】
+https://mfuns.net/mv52229
+- 【【校园跑软件分析】p3 python上传跑步成绩 - 喵御宅】
+https://mfuns.net/mv52236
+- 【【校园跑软件分析】p4 爬取学号信息 - 喵御宅】
+https://mfuns.net/mv52237
+
 
 ## 赞助
 如果你喜欢这个作品 可以给Star或者赞助支持哦~qwq \
