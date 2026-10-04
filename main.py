@@ -65,7 +65,6 @@ def upload(studentno, school, uid, distance, speed, time2):
         "ruleid": "3"
     }
     json_str = json.dumps(data, separators=(',', ':'))
-    #print(json_str)
     gzip_body = gzip.compress(json_str.encode("utf-8"))
     response = requests.post(URL, data=gzip_body)
     print(response.text)
