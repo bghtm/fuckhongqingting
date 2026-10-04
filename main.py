@@ -7,7 +7,7 @@ import requests
 
 def loggin(stuno, password, school):
     URL = "http://222.28.94.116:8030/DragonFlyServ/DflyServer"
-    print(URL)
+    #print(URL)
 
     data = {
         'name': f"['bangdingschool_local','{school}','{stuno}','{password}','HarmonyOS','1145141919','android','16']"
@@ -32,7 +32,7 @@ def loggin(stuno, password, school):
 
 def getinfo(stuno, uid, school):
     URL = "http://222.28.94.116:8030/DragonFlyServ/Api/webserver/getRunDataSummary"
-    print(URL)
+    #print(URL)
     data = {
         "studentno": stuno,
         "uid": uid,
@@ -47,7 +47,7 @@ def getinfo(stuno, uid, school):
 
 def upload(studentno, school, uid, distance, speed, time2):
     URL = "http://222.28.94.116:8030/DragonFlyServ/Api/webserver/uploadRunData"
-    print(URL)
+    #print(URL)
     data = {
         "begintime": str(int(time.time()) - time2),
         "endtime": str(int(time.time())),
@@ -65,17 +65,28 @@ def upload(studentno, school, uid, distance, speed, time2):
         "ruleid": "3"
     }
     json_str = json.dumps(data, separators=(',', ':'))
-    print(json_str)
+    #print(json_str)
     gzip_body = gzip.compress(json_str.encode("utf-8"))
     response = requests.post(URL, data=gzip_body)
     print(response.text)
 
-
-if __name__ == '__main__':
-    stuno = '202511581781'
+def deal(schnum):
+    stuno = schnum
     school = '10032'
     password = hashlib.md5(stuno.encode()).hexdigest()
     uid = loggin(stuno, password, school)
     getinfo(stuno, uid, school)
-    upload(stuno, school, uid, "2345.0", "3.3", 648)
+    upload(stuno, school, uid, "4000.0", "3.4", 648)
     getinfo(stuno, uid, school)
+
+
+
+def main(a,b):
+    print("程序开始运行，请保证链接校园网，然后输入学号...")
+    schnum=input()
+    deal(schnum)
+    print("程序运行完成！")
+    input("按回车键退出...")  # 防止窗口立即关闭
+
+if __name__ == '__main__':
+    main(114,514)
